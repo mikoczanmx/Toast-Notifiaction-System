@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toast System</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <h4>Toast Notifications System</h4>
+    <div class="col">
+      <label for="position">Location</label>
+      <select name="position" id="position">
+        <option value="right-down">Right Down</option>
+        <option value="left-down">Left Down</option>
+        <option value="center-top">Center Top</option>
+        <option value="center-down">Center Down</option>
+      </select><br>
+      <label for="message">Message</label>
+      <input id="message" type="text" value="This is a toast notification." /><br>
+      <label for="duration">Duration (ms)</label>
+      <input id="duration" type="number" min="1" value="3000" />
+    </div>
+    <div></div>
+    <div>
+      <button
+        onclick="
+          showToast(
+            Number(document.getElementById('duration').value),
+            'success',
+            document.getElementById('message').value,
+            document.getElementById('position').value,
+          )
+        "
+      >
+        Show Toast Success
+      </button>
+      <button
+        onclick="
+          showToast(
+            Number(document.getElementById('duration').value),
+            'warning',
+            document.getElementById('message').value,
+            document.getElementById('position').value,
+          )
+        "
+      >
+        Show Toast Warning
+      </button>
+    </div>
+    <div>
+      <button
+        onclick="
+          showToast(
+            Number(document.getElementById('duration').value),
+            'information',
+            document.getElementById('message').value,
+            document.getElementById('position').value,
+          )
+        "
+      >
+        Show Toast Information
+      </button>
+      <button
+        onclick="
+          showToast(
+            Number(document.getElementById('duration').value),
+            'danger',
+            document.getElementById('message').value,
+            document.getElementById('position').value,
+          )
+        "
+      >
+        Show Toast Danger
+      </button>
+    </div>
+  </body>
+</html>
