@@ -6,7 +6,7 @@ custom message, and a configurable display duration.
 
 ## Live demo
 
-[Open the live demo](https://your-live-demo-url.example)
+[Open the live demo](https://mikoczanmx.github.io/Toast-Notifiaction-System/)
 
 ## Features
 
